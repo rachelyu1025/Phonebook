@@ -3,7 +3,7 @@ import React from 'react';
 const CreateBox = () => {
   return (
     <div className='flex flex-col rounded-xl my-4 py-3 px-6 bg-[#3f51e3] space-y-2 text-white'>
-      <label htmlFor='name' className=''>
+      <label htmlFor='name' className='font-semibold'>
         Name
       </label>
       <input
@@ -14,7 +14,7 @@ const CreateBox = () => {
         className='rounded focus:outline-none text-black p-1'
       />
 
-      <label htmlFor='mobile' className=''>
+      <label htmlFor='mobile' className='font-semibold'>
         Mobile
       </label>
       <input
