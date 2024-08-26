@@ -17,6 +17,12 @@ const SearchBox = () => {
     dispatch({ type: 'SEARCH', payload: { searchItem: '' } });
   };
 
+  const handleKeydown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className='flex flex-col'>
       <label htmlFor='search' className='font-bold text-lg'>
@@ -30,6 +36,7 @@ const SearchBox = () => {
           name='search'
           value={searchItem || ''}
           onChange={(e) => setSearchItem(e.target.value)}
+          onKeyDown={handleKeydown}
           className='border-4 border-blue rounded-3xl bg-gray px-2 py-1 mr-2 w-full focus:outline-none'
         />
 
