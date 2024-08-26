@@ -15,6 +15,16 @@ function reducer(state = initialState, action) {
         ],
       };
 
+    case 'DELETE':
+      let filteredContact = state.contactList.filter(
+        (el) => el.name !== payload.name
+      );
+
+      return {
+        ...state,
+        contactList: filteredContact,
+      };
+
     default:
       return { ...state };
   }
