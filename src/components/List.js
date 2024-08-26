@@ -4,12 +4,15 @@ import { useSelector } from 'react-redux';
 
 const List = () => {
   const contactList = useSelector((state) => state.contactList);
+  const searchItem = useSelector((state) => state.searchItem);
 
   return (
     <div className='h-64 overflow-y-scroll'>
-      {contactList.map((item, idx) => (
-        <ListItem key={idx} item={item} />
-      ))}
+      {searchItem
+        ? contactList
+            .filter((el) => el.name === searchItem)
+            .map((item, idx) => <ListItem key={idx} item={item} />)
+        : contactList.map((item, idx) => <ListItem key={idx} item={item} />)}
     </div>
   );
 };

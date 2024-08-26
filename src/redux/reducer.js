@@ -1,5 +1,6 @@
 const initialState = {
   contactList: [],
+  searchItem: '',
 };
 
 function reducer(state = initialState, action) {
@@ -16,13 +17,19 @@ function reducer(state = initialState, action) {
       };
 
     case 'DELETE':
-      let filteredContact = state.contactList.filter(
+      const filteredContact = state.contactList.filter(
         (el) => el.name !== payload.name
       );
 
       return {
         ...state,
         contactList: filteredContact,
+      };
+
+    case 'SEARCH':
+      return {
+        ...state,
+        searchItem: payload.searchItem,
       };
 
     default:
