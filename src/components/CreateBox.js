@@ -2,7 +2,7 @@ import React from 'react';
 
 const CreateBox = () => {
   return (
-    <div className='flex flex-col rounded-xl my-4 py-3 px-6 bg-[#3f51e3] space-y-2 text-white'>
+    <div className='flex flex-col rounded-xl py-3 px-6 bg-[#3f51e3] space-y-2 text-white'>
       <label htmlFor='name' className='font-semibold'>
         Name
       </label>

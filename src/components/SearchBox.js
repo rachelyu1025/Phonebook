@@ -8,7 +8,7 @@ const SearchBox = () => {
         Search
       </label>
 
-      <div className='flex items-center my-2'>
+      <div className='flex items-center my-1'>
         <input
           type='text'
           id='search'

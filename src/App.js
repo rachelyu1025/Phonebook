@@ -5,7 +5,7 @@ import SearchBox from './components/SearchBox';
 
 function App() {
   return (
-    <div className='px-8 py-8'>
+    <div className='px-8 py-6 space-y-2'>
       <h1 className='font-bold text-2xl'>Phone Book</h1>
 
       <CreateBox />
