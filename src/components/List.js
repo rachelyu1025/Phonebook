@@ -10,7 +10,7 @@ const List = () => {
     <div className='h-64 overflow-y-scroll'>
       {searchItem
         ? contactList
-            .filter((el) => el.name === searchItem)
+            .filter((el) => el.name.includes(searchItem))
             .map((item, idx) => <ListItem key={idx} item={item} />)
         : contactList.map((item, idx) => <ListItem key={idx} item={item} />)}
     </div>
